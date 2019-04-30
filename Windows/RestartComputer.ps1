@@ -6,7 +6,7 @@ Script to force restart a remote computer
 .DESCRIPTION
 Options:
 
-    -Computer           - Hostname of the computer that is to be restarted 
+    -Computer       -Hostname of the computer that is to be restarted 
 
 .EXAMPLE
 ./RestartComputer.ps1 -Computer PCHostname

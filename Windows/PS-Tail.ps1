@@ -6,10 +6,10 @@ A Simple script to tail a file in PowerShell
 .DESCRIPTION
 Options:
 
-    -FilePath           - Path to the file to tail
+    -FilePath       -Path to the file to tail
 
 .EXAMPLE
-./PS-Tail.ps1 - FilePath "C:\Path\To\File.txt"
+./PS-Tail.ps1 -FilePath "C:\Path\To\File.txt"
 
 .NOTES
 Author: Shay Hosking
