@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Request>	
+	<Login>
+		<UserName>admin</UserName>
+		<Password>admin</Password>
+	</Login>
+	<Set Operation="add">
+		<WebFilterException>
+			<Name>Logmein Domains</Name>
+			<Desc>Including GoToWebinar</Desc>
+			<Enabled>off</Enabled>
+			<HttpsDecrypt>off</HttpsDecrypt>
+			<VirusScan>off</VirusScan>
+			<PolicyCheck>off</PolicyCheck>
+			<Sandstorm>off</Sandstorm>
+			<EnableURLRegex>yes</EnableURLRegex>
+			<DomainList>
+                <URLRegex>^([A-Za-z0-9.-]*\.)?filepicker\.io\.?/</URLRegex>
+                <URLRegex>^([A-Za-z0-9.-]*\.)?filestackapi\.com\.?/</URLRegex>
+                <URLRegex>^([A-Za-z0-9.-]*\.)?cloudfront\.net\.?/</URLRegex>
+                <URLRegex>^([A-Za-z0-9.-]*\.)?expertcity\.com\.?/</URLRegex>
+                <URLRegex>^([A-Za-z0-9.-]*\.)?getgo\.com\.?/</URLRegex>
+                <URLRegex>^([A-Za-z0-9.-]*\.)?getgocdn\.com\.?/</URLRegex>
+                <URLRegex>^([A-Za-z0-9.-]*\.)?getgoservices\.com\.?/</URLRegex>
+                <URLRegex>^([A-Za-z0-9.-]*\.)?getgoservices\.net\.?/</URLRegex>
+                <URLRegex>^([A-Za-z0-9.-]*\.)?goto-rtc\.com\.?/</URLRegex>
+                <URLRegex>^([A-Za-z0-9.-]*\.)?logmein\.com\.?/</URLRegex>
+                <URLRegex>^([A-Za-z0-9.-]*\.)?logmeininc\.com\.?/</URLRegex>
+                <URLRegex>^([A-Za-z0-9.-]*\.)?logmein\.eu\.?/</URLRegex>
+                <URLRegex>^([A-Za-z0-9.-]*\.)?raas\.io\.?/</URLRegex>
+                <URLRegex>^([A-Za-z0-9.-]*\.)?logme\.in\.?/</URLRegex>
+                <URLRegex>^([A-Za-z0-9.-]*\.)?internap\.net\.?/</URLRegex>
+                <URLRegex>^([A-Za-z0-9.-]*\.)?internapcdn\.net\.?/</URLRegex>
+                <URLRegex>^([A-Za-z0-9.-]*\.)?gotomeet\.at\.?/</URLRegex>
+                <URLRegex>^([A-Za-z0-9.-]*\.)?gotomeet\.me\.?/</URLRegex>
+                <URLRegex>^([A-Za-z0-9.-]*\.)?gotomeeting\.com\.?/</URLRegex>
+                <URLRegex>^([A-Za-z0-9.-]*\.)?joingotomeeting\.com\.?/</URLRegex>
+                <URLRegex>^([A-Za-z0-9.-]*\.)?openvoice\.com\.?/</URLRegex>
+                <URLRegex>^([A-Za-z0-9.-]*\.)?gotowebinar\.com\.?/</URLRegex>
+                <URLRegex>^([A-Za-z0-9.-]*\.)?joinwebinar\.com\.?/</URLRegex>
+                <URLRegex>^([A-Za-z0-9.-]*\.)?webinar\.com\.?/</URLRegex>
+                <URLRegex>^([A-Za-z0-9.-]*\.)?gotostage\.com\.?/</URLRegex>
+                <URLRegex>^([A-Za-z0-9.-]*\.)?walkme\.com\.?/</URLRegex>
+                <URLRegex>^([A-Za-z0-9.-]*\.)?gototraining\.com\.?/</URLRegex>
+                <URLRegex>^([A-Za-z0-9.-]*\.)?jointraining\.com\.?/</URLRegex>
+                <URLRegex>^([A-Za-z0-9.-]*\.)?firebaseio\.com\.?/</URLRegex>
+                <URLRegex>^([A-Za-z0-9.-]*\.)?firebaseapp\.com\.?/</URLRegex>
+                <URLRegex>^([A-Za-z0-9.-]*\.)?logmeinusercontent\.com\.?/</URLRegex>
+			</DomainList>
+		</WebFilterException>
+	</Set>
+</Request>
