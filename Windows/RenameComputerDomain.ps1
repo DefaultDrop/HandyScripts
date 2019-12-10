@@ -24,11 +24,21 @@ https://github.com/DefaultDrop/HandyScripts
 Param(
     
     [Parameter(Mandatory = $true)]
-    [string]$ClientCode
+    [string]$ClientCode,
+
+    [Parameter(Mandatory = $true)]
+    [string]$DomainUser,
+
+    [Parameter(Mandatory = $true)]
+    [string]$DomainPass
 
 )
 
 Write-Host "Client Code is $ClientCode"
+
+# Get Domain Credentials
+$DomainPassCred = ConvertTo-SecureString $DomainPass -AsPlainText -Force
+$Credentials = New-Object System.Management.Automation.PSCredential ($DomainPass, $DomainPassCred)
 
 # Get the serial number using WMI
 $WMI = get-ciminstance win32_bios
@@ -38,4 +48,4 @@ $SerialNumber = $wmi.SerialNumber
 $NewName = $ClientCode + "-" + $SerialNumber
 
 # Rename the computer
-Rename-Computer -NewName $NewName
+Rename-Computer -NewName $NewName -DomainCredential $Credentials
