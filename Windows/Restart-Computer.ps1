@@ -9,7 +9,7 @@ Options:
     -Computer       -Hostname of the computer that is to be restarted 
 
 .EXAMPLE
-./RestartComputer.ps1 -Computer PCHostname
+./Restart-Computer.ps1 -Computer Computer1
 
 .NOTES
 Uses WMI to get the computer name and then calls Win32Shutdown WMI command with the force value in an explicit array.

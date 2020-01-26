@@ -11,7 +11,7 @@ Options:
     -Service     -The service to alter
 
 .EXAMPLE
-./StopStartService.ps1 -Start -Service ServiceName
+./Set-ServiceState.ps1 -Start -Service ServiceName
 
 .NOTES
 Author: Shay Hosking

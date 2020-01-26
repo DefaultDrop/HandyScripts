@@ -1,13 +1,13 @@
 <#
 
 .SYNOPSIS
-Simple script to find your WAN IP address.
+Simple script to find your WAN IP address using ipinfo.io.
 
 .DESCRIPTION
 Options:
 
 .EXAMPLE
-./FindWANIP.ps1
+./Get-WanIp.ps1
 
 .NOTES
 All credit to: 

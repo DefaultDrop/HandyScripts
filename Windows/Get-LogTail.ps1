@@ -9,7 +9,7 @@ Options:
     -FilePath       -Path to the file to tail
 
 .EXAMPLE
-./PS-Tail.ps1 -FilePath "C:\Path\To\File.txt"
+./Get-LogTail.ps1 -FilePath "C:\Path\To\File.txt"
 
 .NOTES
 Author: Shay Hosking

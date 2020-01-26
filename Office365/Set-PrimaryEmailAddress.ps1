@@ -1,14 +1,25 @@
-##################################################
-# Script to update primary email address in
-# Exchange Online
-#
-# Usage: PS-ExchangeOnlineUpdatePriEmail 
-#   -O365User "UserToUpdate@yourdomainname.com"                      
-#   -NewEmail "NewEmail@yourdomain.com"                       
-#
-# https://github.com/DefaultDrop/Scripts
-#
-##################################################
+<#
+
+.SYNOPSIS
+Script to update primary email address of a user in Exchange Online.
+
+.DESCRIPTION
+Options:
+
+    -o365User       -User to update. In format of room@yourdomain.com.
+    -NewEmail       -New primary email address
+
+.EXAMPLE
+./Set-PrimaryEmailAddress.ps1 -o365User susan.g@contoso.com -NewEmail susan@contoso.com
+
+.NOTES
+Author: Shay Hosking
+
+
+.LINK
+https://github.com/DefaultDrop/HandyScripts
+
+#>
 
 ### User Paramaters ###
 param(  

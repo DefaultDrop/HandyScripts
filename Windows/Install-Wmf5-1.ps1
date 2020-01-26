@@ -7,7 +7,7 @@ This script installs Windows Management Framework (WMF) 5.1
 Options:
 
 .EXAMPLE
-./Install-WMF5-1.ps1
+./Install-Wmf5-1.ps1
 
 .NOTES
 WMF 5.1 includes PowerShell version 5.1, this script is handy for running scripts that require 5.1 at minumum.

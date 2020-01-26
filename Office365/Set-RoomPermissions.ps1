@@ -9,7 +9,7 @@ Options:
     -Room       -Room to update permissions on. In format of room@yourdomain.com.
 
 .EXAMPLE
-./UpdateRoomPermissions.ps1 -Room meetingroom@contoso.com
+./Set-RoomPermissions.ps1 -Room meetingroom@contoso.com
 
 .NOTES
 Author: Shay Hosking
@@ -25,11 +25,7 @@ https://github.com/DefaultDrop/HandyScripts
 ### User Paramaters ###
 param(  
     [Parameter(Mandatory = $true)]
-    [string]$ResourceName,
-
-    [Parameter(Mandatory = $true)]
-    [ValidateSet("Room", "Equipment")]
-    [string]$ResourceType
+    [string]$Room
     )
 
 ### Connect to Exchange Online ###
@@ -39,17 +35,9 @@ $Session = New-PSSession -ConfigurationName Microsoft.Exchange -ConnectionUri ht
 Import-PSSession $Session
 
 try {
-### Create Resource Mailbox ###
-Write-Host "Creating Resource Mailbox" -ForegroundColor Green
-New-Mailbox -Name $ResourceName -$ResourceType -ErrorAction Stop
-
-### Enable Automatic Booking ###
-Write-Host "Enable Automatic Booking" -ForegroundColor Green
-Set-CalendarProcessing -Identity $ResourceName -AutomateProcessing AutoAccept -ErrorAction Stop
-
-### Set the default permission of Calendar to Publishing Editor ###
-Write-Host "Set Default Permissions" -ForegroundColor Green
-Set-MailboxFolderPermission -Identity "${ResourceName}:\Calendar" -User default -AccessRights PublishingAuthor -ErrorAction Stop
+### Update Room Calendar Permissions ###
+Write-Host "Updating Room Calendar Permissions" -ForegroundColor Green
+Set-MailboxFolderPermission -Identity "${Room}:\Calendar" -User default -AccessRights PublishingAuthor -ErrorAction Stop
 }
 catch {
     $ErrorMessage = $_.Exception.Message

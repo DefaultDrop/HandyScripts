@@ -9,7 +9,7 @@ Options:
     -Target       -DNS host / IP to scan
 
 .EXAMPLE
-./nmap.ps1 -Target example.com
+./Get-NmapPortsBatch.ps1 -Target example.com
 
 .NOTES
 Author: Shay Hosking
